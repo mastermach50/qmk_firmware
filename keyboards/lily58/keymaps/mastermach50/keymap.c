@@ -60,9 +60,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //├───────┼───────┼───────┼───────┼───────┼───────┤                 ├───────┼───────┼───────┼───────┼───────┼───────┤
    KC_F1  ,KC_F2  ,KC_F3  ,KC_F4  ,KC_F5  ,KC_F6  ,                  KC_F7  ,KC_F8  ,KC_F9  ,KC_F10 ,KC_F11 ,KC_F12 ,
 //├───────┼───────┼───────┼───────┼───────┼───────┤                 ├───────┼───────┼───────┼───────┼───────┼───────┤
-   _______,XXXXXXX,XXXXXXX,KC_MINS,KC_EQL ,KC_INS ,                  KC_DEL ,KC_PSCR,KC_SCRL,KC_PAUS,XXXXXXX,XXXXXXX,
+   _______,XXXXXXX,XXXXXXX,KC_MINS,KC_EQL ,KC_INS ,                  KC_DEL ,KC_PSCR,KC_SCRL,KC_PAUS,KC_COLN,KC_DQUO,
 //├───────┼───────┼───────┼───────┼──═══──┼───────┼───────┐ ┌───────┼───────┼──═══──┼───────┼───────┼───────┼───────┤
-   _______,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,  XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,_______,
+   _______,XXXXXXX,XXXXXXX,KC_UNDS,KC_PLUS,KC_PIPE,KC_LCBR,  KC_RCBR,XXXXXXX,XXXXXXX,KC_LT  ,KC_GT  ,KC_QUES,_______,
 //└───────┴───────┼───────┼───────┼───────┼───────┼───────┘ └───────┼───────┼───────┼───────┼───────┼───────┴───────┘
                    _______,_______,_______,_______,                  _______,_______,_______,_______
 //                └───────┴───────┴───────┴───────┘                 └───────┴───────┴───────┴───────┘
@@ -85,7 +85,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 [MSMD] = LAYOUT(
 //┌───────┬───────┬───────┬───────┬───────┬───────┐                 ┌───────┬───────┬───────┬───────┬───────┬───────┐
-   XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,                  KC_SLEP,KC_VOLU,KC_BRIU,XXXXXXX,XXXXXXX,XXXXXXX,
+   XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,KC_SLEP,                  XXXXXXX,KC_VOLU,KC_BRIU,XXXXXXX,XXXXXXX,XXXXXXX,
 //├───────┼───────┼───────┼───────┼───────┼───────┤                 ├───────┼───────┼───────┼───────┼───────┼───────┤
    XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,                  KC_MUTE,KC_VOLD,KC_BRID,XXXXXXX,XXXXXXX,XXXXXXX,
 //├───────┼───────┼───────┼───────┼───────┼───────┤                 ├───────┼───────┼───────┼───────┼───────┼───────┤

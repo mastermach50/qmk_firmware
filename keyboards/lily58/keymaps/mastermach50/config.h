@@ -22,5 +22,15 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #define EE_HANDS
 
+#undef VENDOR_ID
+#undef PRODUCT_ID
+#undef MANUFACTURER
+#undef PRODUCT
+
+#define VENDOR_ID 0xfeed
+#define PRODUCT_ID 0xdeef
+#define MANUFACTURER "Mathew Manoj"
+#define PRODUCT "Mathew's Lily58"
+
 #define QUICK_TAP_TERM 0
 #define TAPPING_TERM 150
