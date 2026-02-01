@@ -27,8 +27,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #undef MANUFACTURER
 #undef PRODUCT
 
-#define VENDOR_ID 0xfeed
-#define PRODUCT_ID 0xdeef
+#define VENDOR_ID 0x4D33
+#define PRODUCT_ID 0x4B42
 #define MANUFACTURER "Mathew Manoj"
 #define PRODUCT "Mathew's Lily58"
 

@@ -8,8 +8,8 @@ enum custom_keys {
 enum layers {
   BASE = 0,
   NOHR,
-  SYM,
   NAV,
+  SYM,
   MSMD,
 };
 
@@ -54,21 +54,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //                └───────┴───────┴───────┴───────┘                 └───────┴───────┴───────┴───────┘
 ),
 
-[SYM] = LAYOUT(
-//┌───────┬───────┬───────┬───────┬───────┬───────┐                 ┌───────┬───────┬───────┬───────┬───────┬───────┐
-   KC_GRV ,KC_EXLM,KC_AT  ,KC_HASH,KC_DLR ,KC_PERC,                  KC_CIRC,KC_AMPR,KC_ASTR,KC_LPRN,KC_RPRN,KC_TILD,
-//├───────┼───────┼───────┼───────┼───────┼───────┤                 ├───────┼───────┼───────┼───────┼───────┼───────┤
-   KC_F1  ,KC_F2  ,KC_F3  ,KC_F4  ,KC_F5  ,KC_F6  ,                  KC_F7  ,KC_F8  ,KC_F9  ,KC_F10 ,KC_F11 ,KC_F12 ,
-//├───────┼───────┼───────┼───────┼───────┼───────┤                 ├───────┼───────┼───────┼───────┼───────┼───────┤
-   _______,XXXXXXX,XXXXXXX,KC_MINS,KC_EQL ,KC_INS ,                  KC_DEL ,KC_PSCR,KC_SCRL,KC_PAUS,KC_COLN,KC_DQUO,
-//├───────┼───────┼───────┼───────┼──═══──┼───────┼───────┐ ┌───────┼───────┼──═══──┼───────┼───────┼───────┼───────┤
-   _______,XXXXXXX,XXXXXXX,KC_UNDS,KC_PLUS,KC_PIPE,KC_LCBR,  KC_RCBR,XXXXXXX,XXXXXXX,KC_LT  ,KC_GT  ,KC_QUES,_______,
-//└───────┴───────┼───────┼───────┼───────┼───────┼───────┘ └───────┼───────┼───────┼───────┼───────┼───────┴───────┘
-                   _______,_______,_______,_______,                  _______,_______,_______,_______
-//                └───────┴───────┴───────┴───────┘                 └───────┴───────┴───────┴───────┘
-),
-
-
 [NAV] = LAYOUT(
 //┌───────┬───────┬───────┬───────┬───────┬───────┐                 ┌───────┬───────┬───────┬───────┬───────┬───────┐
    XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,DF(BASE),                DF(NOHR),XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,
@@ -83,21 +68,37 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //                └───────┴───────┴───────┴───────┘                 └───────┴───────┴───────┴───────┘
 ),
 
+[SYM] = LAYOUT(
+//┌───────┬───────┬───────┬───────┬───────┬───────┐                 ┌───────┬───────┬───────┬───────┬───────┬───────┐
+   KC_GRV ,KC_EXLM,KC_AT  ,KC_HASH,KC_DLR ,KC_PERC,                  KC_CIRC,KC_AMPR,KC_ASTR,KC_LPRN,KC_RPRN,KC_TILD,
+//├───────┼───────┼───────┼───────┼───────┼───────┤                 ├───────┼───────┼───────┼───────┼───────┼───────┤
+   KC_F1  ,KC_F2  ,KC_F3  ,KC_F4  ,KC_F5  ,KC_F6  ,                  KC_F7  ,KC_F8  ,KC_F9  ,KC_F10 ,KC_F11 ,KC_F12 ,
+//├───────┼───────┼───────┼───────┼───────┼───────┤                 ├───────┼───────┼───────┼───────┼───────┼───────┤
+   _______,XXXXXXX,XXXXXXX,KC_MINS,KC_EQL ,KC_INS ,                  KC_DEL ,KC_PSCR,KC_SCRL,KC_PAUS,KC_COLN,KC_DQUO,
+//├───────┼───────┼───────┼───────┼──═══──┼───────┼───────┐ ┌───────┼───────┼──═══──┼───────┼───────┼───────┼───────┤
+   _______,XXXXXXX,XXXXXXX,KC_UNDS,KC_PLUS,KC_PIPE,KC_LCBR,  KC_RCBR,XXXXXXX,XXXXXXX,KC_LT  ,KC_GT  ,KC_QUES,_______,
+//└───────┴───────┼───────┼───────┼───────┼───────┼───────┘ └───────┼───────┼───────┼───────┼───────┼───────┴───────┘
+                   _______,_______,_______,_______,                  _______,_______,_______,_______
+//                └───────┴───────┴───────┴───────┘                 └───────┴───────┴───────┴───────┘
+),
+
 [MSMD] = LAYOUT(
 //┌───────┬───────┬───────┬───────┬───────┬───────┐                 ┌───────┬───────┬───────┬───────┬───────┬───────┐
-   XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,KC_SLEP,                  XXXXXXX,KC_VOLU,KC_BRIU,XXXXXXX,XXXXXXX,XXXXXXX,
+   KC_SLEP,KC_WAKE,XXXXXXX,XXXXXXX,XXXXXXX,KC_PWR ,                  XXXXXXX,KC_VOLU,KC_BRIU,XXXXXXX,XXXXXXX,KC_CAPS,
 //├───────┼───────┼───────┼───────┼───────┼───────┤                 ├───────┼───────┼───────┼───────┼───────┼───────┤
-   XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,                  KC_MUTE,KC_VOLD,KC_BRID,XXXXXXX,XXXXXXX,XXXXXXX,
+   XXXXXXX,XXXXXXX,XXXXXXX,KC_MRWD,KC_MSTP,KC_MFFD,                  KC_MUTE,KC_VOLD,KC_BRID,XXXXXXX,XXXXXXX,KC_NUM ,
 //├───────┼───────┼───────┼───────┼───────┼───────┤                 ├───────┼───────┼───────┼───────┼───────┼───────┤
    _______,XXXXXXX,XXXXXXX,KC_MPRV,KC_MPLY,KC_MNXT,                  MS_LEFT,MS_DOWN,MS_UP  ,MS_RGHT,XXXXXXX,XXXXXXX,
 //├───────┼───────┼───────┼───────┼──═══──┼───────┼───────┐ ┌───────┼───────┼──═══──┼───────┼───────┼───────┼───────┤
-   _______,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,MS_WHLL,MS_WHLU,  MS_WHLD,MS_WHLR,MS_BTN1,MS_BTN2,XXXXXXX,XXXXXXX,_______,
+   _______,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,MS_WHLL,MS_WHLU,  MS_WHLD,MS_WHLR,MS_BTN1,MS_BTN2,MS_BTN3,MS_BTN4,_______,
 //└───────┴───────┼───────┼───────┼───────┼───────┼───────┘ └───────┼───────┼───────┼───────┼───────┼───────┴───────┘
                    _______,_______,_______,_______,                  _______,_______,_______,_______
 //                └───────┴───────┴───────┴───────┘                 └───────┴───────┴───────┴───────┘
 )
 
 };
+
+
 bool process_record_user(uint16_t keycode, keyrecord_t* record) {
   switch (keycode) {
     case MO_NAV:
